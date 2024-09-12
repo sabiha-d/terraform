@@ -14,11 +14,11 @@
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_object
 
 
-#resource "google_storage_bucket" "task-1-static-site" {
+# resource "google_storage_bucket" "task-1-static-site" {
 #  name          = "task-1-urlgshsggsh"
 #  location      = "EU"
 #  force_destroy = true
-#}
+# }
 
 # resource "google_storage_bucket_iam_binding" "task-1-binding" {
 #   bucket = google_storage_bucket.task-1-static-site.name
@@ -30,5 +30,11 @@
 
 data "google_storage_bucket_object" "task-5-hacknheat" {
   name   = "svidenov_readme.md"
+  bucket = "hack-and-heat-2024-task-5"
+}
+
+resource "google_storage_bucket_object" "task-5-resource" {
+  name   = "sabi-butterfly"
+  content = google_storage_bucket_object.task-5-hacknheat
   bucket = "hack-and-heat-2024-task-5"
 }
