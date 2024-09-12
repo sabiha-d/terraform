@@ -27,3 +27,7 @@
 #     "user:sabiha.durucan@senacor.com",
 #   ]
 # }
+
+data "google_storage_bucket" "hack-and-heat-2024-task-5" {
+  name = "task-5-my-bucket"
+}
