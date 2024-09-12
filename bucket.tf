@@ -35,6 +35,6 @@ data "google_storage_bucket_object" "task-5-hacknheat" {
 
 resource "google_storage_bucket_object" "task-5-resource" {
   name   = "sabi-butterfly"
-  content = data.google_storage_bucket_object.task-5-hacknheat
+  content = data.google_storage_bucket_object.task-5-hacknheat.name
   bucket = "hack-and-heat-2024-task-5"
 }
