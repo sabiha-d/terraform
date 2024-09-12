@@ -28,6 +28,7 @@
 #   ]
 # }
 
-data "google_storage_bucket" "hack-and-heat-2024-task-5" {
-  name = "task-5-my-bucket"
+data "google_storage_bucket_object" "task-5-hacknheat" {
+  name   = "README.md"
+  bucket = "hack-and-heat-2024-task-5"
 }
